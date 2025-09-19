@@ -1,0 +1,146 @@
+# Social Proof Types - Complete Guide
+# Extracted from "All 5 Social Proof Types - Full Breakdown"
+
+social_proof_types:
+  type_1_did_this:
+    name: "I Did This Social Proof"
+    description: "I attended the webinar / did the quiz / downloaded the guide — and it was solid."
+    proves:
+      - "Your free content delivers value"
+      - "Your system has substance"
+      - "You're not just collecting but helping"
+    importance: "Crucial due to content skepticism & information overload"
+    placement_locations:
+      - landing_pages
+      - webinar_opt_in
+      - lead_magnet_promos
+      - thank_you_pages
+    example_quotes:
+      - "Downloaded the freebie. Holy sh*t – better than some paid programs."
+      - "Yesterday I downloaded it – holy sh*t. More clarity than in the last 3 paid trainings combined."
+      - "Thought it would be a classic freebie... nope. That was a mini-workshop with depth. Thanks for that."
+    
+  type_2_you_are_good:
+    name: "You Are Good Social Proof"
+    description: "This person is clear, integral, inspiring."
+    proves:
+      - "You are a person who can be trusted"
+      - "Your integrity and presence"
+      - "Your energetic leadership quality"
+    focus: "Perception, not results"
+    placement_locations:
+      - about_page
+      - social_reels
+      - bio_sections
+      - onboarding_sequences
+    example_quotes:
+      - "Whether you buy or not – this coach gives you the feeling of being seen."
+      - "I've rarely experienced someone who is so clear – and at the same time so empathetic."
+      - "You saw more in 1 sentence than my last coach in 3 months."
+    
+  type_3_authority:
+    name: "Authority Social Proof"
+    description: "Seen in: Forbes, Entrepreneur, Business Insider..."
+    proves:
+      - "You are visible, recognized, legitimate"
+      - "Official recognition in your niche"
+      - "Visual credibility without explanation"
+    effectiveness: "Works visually (logos, badges) – even without clicks"
+    placement_locations:
+      - website_banner
+      - funnel_header
+      - speaker_pages
+      - ad_creatives
+      - checkout_pages
+    formats:
+      - logo_line: "Gesehen in... with logo row"
+      - text_integration: "After my interview in Entrepreneur I talked about..."
+      - visual_overlay: "As seen in... badge in ads"
+    
+  type_4_organic_social:
+    name: "Organic Social Media Proof"
+    description: "Comments, threads, feedbacks that feel genuine."
+    proves:
+      - "Authenticity & real-time impact"
+      - "People talk about you without script"
+      - "Trust comes from the crowd, not from you"
+    best_source: "Not briefed – but freely posted"
+    placement_locations:
+      - screenshots_in_slides
+      - highlight_stories
+      - landing_page_section: "What others say..."
+      - ad_comments_left_standing
+    example_quotes:
+      - "After the live I directly got 3 new customers – thanks, Scott!"
+      - "Your story yesterday resolved something in me – Thank you for that 🙏"
+      - "Wanted to just say – the freebie completely changed my view on the topic."
+    
+  type_5_results_based:
+    name: "Results-Based Proof"
+    description: "Transformation in black and white."
+    proves:
+      - "Your system works"
+      - "Concrete ROI and measurable change"
+      - "Before/after transformation evidence"
+    importance: "Essential for buyers who want ROI"
+    placement_locations:
+      - sales_pages
+      - email_sequences
+      - before_after_graphics
+      - retargeting_ads
+    example_quotes:
+      - "From 3k/month to 25k launch in 6 weeks – with exactly this process."
+      - "Anna came with 3k monthly revenue. After 6 weeks with our system: 25k launch."
+
+# Social Proof Audit Framework
+audit_framework:
+  core_questions:
+    - "Where do you currently use social proof?"
+    - "Is it always 'I achieved results'? → Then depth is missing."
+    - "Do you use your comments, DMs, workshop feedbacks?"
+  
+  action_steps:
+    collect_material:
+      - "Gather the last 10 real feedbacks"
+      - "Look through DMs, emails, comments, workshop feedback"
+    categorize:
+      categories:
+        - result: "Before/after transformation"
+        - personality: "Perception of your character"
+        - content: "Feedback on content or method"
+        - platform: "Where it was said (story, IG, email, Zoom...)"
+    
+    strategic_placement:
+      awareness_cold:
+        ideal_proof: "Organic / Authority"
+        placement: "Ad creatives, IG reels"
+      nurture_warm:
+        ideal_proof: "Personality / 'You Are Good'"
+        placement: "Email sequence, highlight stories"
+      sales_hot:
+        ideal_proof: "Results"
+        placement: "Sales page, webinar CTA, retargeting"
+      retention_trust:
+        ideal_proof: "Content-based feedback"
+        placement: "Thank you page, Slack/group shoutouts"
+
+# Implementation Tips
+implementation:
+  proof_library_setup:
+    - "Create folder 'Proof Assets'"
+    - "Subfolders by type & funnel phase"
+    - "Add 1 new comment weekly"
+    - "Result: Always have fresh trust content ready"
+  
+  visual_guidelines:
+    organic_proof: "Keep it raw, no high-gloss, no templates"
+    authority_proof: "Use logos and badges prominently"
+    results_proof: "Make it concrete: Clear. Number. Time. Context."
+
+# Key Insights
+key_insights:
+  - "If your proof only relies on results – you're missing 70% of trust"
+  - "People buy on emotion, connection, resonance with your frequency"
+  - "Your energy sells – long before your sales letter does"
+  - "Proof is not just polished. Proof is when you can post screenshots without asking"
+  - "People don't buy tools. They buy what they hope happens after the tool works"

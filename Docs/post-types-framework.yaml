@@ -1,0 +1,198 @@
+# Die 6 Grundlegenden Post-Typen
+# Extracted from "Die 6 Grundlegenden Post-Typen (1)"
+
+post_types:
+  overview:
+    description: "These 6 post types are not just categories, but psychological levers that transform attention into trust and ultimately into buying behavior."
+    purpose: "Each post type speaks to a different psychological level: Belief, Emotion, Identity, Curiosity, Action, Social Proof"
+    strategy: "They are strategically placed to build resonance and transform the viewer from observer to buyer"
+
+  personal_philosophy:
+    name: "Personal Philosophy"
+    tagline: "Das glaube ich über [Thema]" # "This is what I believe about [topic]"
+    purpose: 
+      - "Clarifies your values, beliefs and worldview"
+      - "Connects on a belief level with your audience"
+      - "Creates immediate resonance with like-minded people"
+    
+    psychology: "People don't buy products – they buy the values and beliefs you embody"
+    
+    how_it_works:
+      - "Choose a topic important to you (success, money, freedom, growth, authenticity)"
+      - "Share your opinion or conviction clearly and directly"
+      - "Avoid being too general or soft – position yourself clearly and boldly"
+    
+    example_formulations:
+      - "Ich glaube, dass wahre Freiheit erst entsteht, wenn du deine Angst vor Geld überwindest."
+      - "Meiner Meinung nach ist Wachstum kein Sprint, sondern ein täglicher Prozess."
+      - "Für mich bedeutet Erfolg, mit Integrität zu handeln, auch wenn es schwerfällt."
+    
+    audience_effect:
+      - "Builds immediate emotional bridge"
+      - "Activates people who share your values to follow, comment and trust"
+      - "Helps attract right people and filter out wrong ones"
+
+  lifestyle:
+    name: "Lifestyle"
+    tagline: "So lebe ich – und deshalb" # "This is how I live – and why"
+    purpose:
+      - "Shows your daily life, your approach to success, challenges, priorities"
+      - "Builds identification and inspiration"
+      - "Makes you human and relatable"
+    
+    psychology: "People buy from people, not from brands"
+    
+    how_it_works:
+      - "Share moments from your daily life that show how you live and work"
+      - "Explain why you live the way you do (your values and decisions)"
+      - "Show how you master challenges or set priorities"
+      - "Be authentic – it doesn't have to be perfect, just real"
+    
+    example_formulations:
+      - "Jeden Morgen starte ich mit 20 Minuten Meditation, weil mein Geist klare Richtung braucht."
+      - "Heute habe ich einen schwierigen Kundentermin gehabt – aber ich bleibe bei meiner Haltung, ehrlich und wertschätzend zu sein."
+      - "Ich arbeite bewusst nur 4 Tage die Woche, weil Freiheit für mich Priorität hat."
+    
+    audience_effect:
+      - "Strengthens bond to you as a person"
+      - "Encourages reflection ('My life could look like this too')"
+      - "Builds emotional connection beyond pure content"
+      - "Can motivate and inspire"
+
+  personal_story:
+    name: "Personal Story"
+    purpose:
+      - "Tells emotional stories from your life"
+      - "Creates real human-to-human connection" 
+      - "Makes you approachable and authentic"
+    
+    psychology: "People connect through emotions, not through data or facts"
+    
+    how_it_works:
+      - "Choose a story that shows relevant conflict, challenge or turning point"
+      - "Describe your feelings, thoughts and reactions authentically"
+      - "Share what you learned or how you grew"
+      - "Connect story with message or insight that inspires your audience"
+    
+    example_formulations:
+      - "Vor fünf Jahren stand ich am absoluten Tiefpunkt – ohne Plan, ohne Klarheit. Heute weiß ich, dass genau diese Zeit mich zu dem gemacht hat, der ich bin."
+      - "Ich erinnere mich an meinen ersten großen Fehler im Business – wie ich fast alles verloren hätte. Das war mein Wendepunkt."
+      - "Als ich meine Komfortzone verließ und meinen ersten Online-Kurs startete, war ich voller Zweifel – und genau das hat mich stärker gemacht."
+    
+    audience_effect:
+      - "Builds deep emotional connection"
+      - "Makes you human and likeable"
+      - "Encourages others to open up and trust"
+      - "Helps audience identify with you and your brand"
+
+  asking:
+    name: "Asking"
+    purpose:
+      - "Requests feedback, opinions, insights"
+      - "Uses crowd wisdom and validates your offer"
+      - "Activates engagement and dialogue"
+    
+    psychology: "People feel valued when their opinion is asked"
+    
+    how_it_works:
+      - "Ask clear, open question that encourages thinking"
+      - "Encourage your community to answer honestly and thoroughly"
+      - "Show appreciation for all contributions"
+      - "Use answers to optimize your product, offer or content"
+    
+    example_formulations:
+      - "Was ist aktuell deine größte Herausforderung im Business? Schreib's mir in die Kommentare!"
+      - "Wie gehst du mit Rückschlägen um? Ich bin gespannt auf deine Erfahrung."
+      - "Welche Themen sollen wir im nächsten Webinar unbedingt behandeln?"
+    
+    audience_effect:
+      - "Activates engagement and interaction"
+      - "Increases post visibility through more comments"
+      - "Strengthens relationship with community"
+      - "Provides valuable insights for strategic decisions"
+
+  invitation:
+    name: "Invitation"
+    purpose:
+      - "Invites people into your ecosystem: webinars, challenges, guides"
+      - "Connects community building with conversion"
+      - "Offers concrete next step from attention to engagement"
+    
+    psychology: "Bridge from attention to engagement and ultimately to conversion"
+    
+    how_it_works:
+      - "Clearly explain what you offer and why it's valuable"
+      - "Make clear what person gets and how they benefit"
+      - "Build urgency or exclusivity (limited seats, time-limited offer)"
+      - "Add clear call-to-action"
+    
+    example_formulations:
+      - "Ich lade dich herzlich zu meinem kostenlosen Webinar nächste Woche ein – sichere dir jetzt deinen Platz!"
+      - "Mach mit bei meiner 5-Tage-Challenge und bring dein Business auf das nächste Level."
+      - "Hol dir jetzt meinen kostenlosen Guide und starte durch!"
+    
+    audience_effect:
+      - "Encourages active participation and deepening relationship"
+      - "Creates feeling of belonging and community"
+      - "Supports sales process through gentle invitation instead of pressure"
+      - "Increases engagement and brand loyalty"
+
+  results_sharing:
+    name: "Results Sharing"
+    purpose:
+      - "Shares testimonials, transformations, concrete successes"
+      - "Builds social proof that validates your method"
+      - "Shows your system actually works"
+    
+    psychology: "People trust experiences and results of others more than promises from you"
+    
+    how_it_works:
+      - "Share concrete numbers, facts and stories"
+      - "Use quotes, screenshots or videos from customers"
+      - "Briefly explain context: What challenge did customer have, how did your offer help?"
+      - "Keep it honest and authentic – no exaggerated promises"
+    
+    example_formulations:
+      - "Dank unseres Programms hat [Kundenname] seinen Umsatz in 3 Monaten verdoppelt!"
+      - "Hier ist, was [Kundenname] über ihre Transformation sagt:"
+      - "Nach nur 6 Wochen Coaching konnte [Kundenname] endlich ihren Traumkunden gewinnen."
+    
+    audience_effect:
+      - "Increases credibility and trust in your brand"
+      - "Encourages undecided leads to choose your offer"
+      - "Builds community that celebrates success and supports each other"
+      - "Promotes engagement through sharing success stories"
+
+# Strategic Implementation
+implementation_strategy:
+  key_principle: "These post types work individually, but combining them creates customer journeys"
+  customer_journey_flow: "Belief → Connection → Invitation → Conversion"
+  
+  integration_approach:
+    - "Build sequences that run across multiple channels (email, Facebook, blog etc.)"
+    - "Think in customer journeys, not isolated posts"
+    - "Use all 6 post types strategically to pave the way to your offer"
+  
+  content_audit_questions:
+    - "Which of these 6 post types are missing in your current content strategy?"
+    - "Can you build a 7-day nurture sequence that strategically links all 6 post types?"
+  
+  example_sequence:
+    name: "7-Day Content Sequence"
+    description: "Strategic combination of all 6 post types over one week"
+    flow:
+      day_1: "Personal Philosophy - establish beliefs"
+      day_2: "Lifestyle - show values in action"
+      day_3: "Personal Story - create emotional connection"
+      day_4: "Asking - engage community"
+      day_5: "Results Sharing - provide social proof"
+      day_6: "Invitation - convert to action"
+      day_7: "Follow-up on invitation responses"
+
+# Key Insights
+key_insights:
+  - "Menschen verbinden sich mit Geschichten – nicht nur mit Logik" # "People connect with stories – not just logic"
+  - "Each post type speaks to different psychological level"
+  - "Strategic sequencing transforms observers into buyers"
+  - "Community building and conversion can be seamlessly integrated"
+  - "Authenticity and vulnerability create strongest connections"

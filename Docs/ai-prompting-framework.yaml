@@ -1,0 +1,201 @@
+# AI Prompting Framework for LeadConnector
+# Machine-readable prompting guide optimized for AI agents
+
+metadata:
+  title: "AI Prompting 101 - LeadConnector Framework"
+  source: "HighLevel Support Portal"
+  purpose: "Machine-readable prompting guidelines for conversation AI"
+  format_optimized_for: "AI_parsing"
+  last_updated: "2025-09-19"
+
+core_principles:
+  effectiveness_factors:
+    - information_quantity: "More context = better results"
+    - prompt_quality: "Well-crafted prompts increase human agency"
+    - relationship_building: "Good prompts build customer relationships"
+    - business_impact: "Proper prompting drives business growth"
+
+prompt_elements:
+  required_components:
+    role:
+      definition: "Persona, directions and context for AI model steering"
+      importance: "Pivotal for coherence and relevance of responses"
+      function: "Specifying interaction and flow"
+    
+    task:
+      definition: "Specific instructions and objectives for the model"
+      importance: "Core of successful prompts - prevents hallucination"
+      function: "Defining clear, unambiguous objectives"
+      
+    guidelines:
+      definition: "Guardrails for bot behavior and response boundaries"
+      importance: "Steers ChatBot toward desired outcomes"
+      function: "Creating roadmap for precise responses"
+
+best_practices:
+  techniques:
+    repetition:
+      purpose: "Emphasize specific instructions for consistency"
+      implementation: "Reiterate critical parts across prompt sections"
+      effectiveness: "Ensures predictable alignment with expectations"
+      use_cases: ["reinforcing guidelines", "task adherence", "behavior consistency"]
+    
+    examples_illustrations:
+      purpose: "Enhance AI comprehension through concrete examples"
+      when_to_use: "When describing is harder than showing"
+      benefits: ["style replication", "tone matching", "response patterns"]
+      format_types: ["what_to_say", "what_not_to_say", "conversation_examples"]
+    
+    iterative_improvement:
+      process: "Test -> Tweak -> Fine-tune -> Deploy"
+      tools: ["Bot Trial under ConversationAI", "A/B testing", "performance monitoring"]
+      approach: "Fundamentally iterative - experimentation required"
+
+prompt_structure_examples:
+  role_examples:
+    poor_example:
+      text: "You are a salesperson for {{ai.business_name}}, assist customers and help them book appointments. Act like a human. You are talking to {{contact.name}}."
+      issues: ["vague instructions", "lacks specificity", "minimal context"]
+    
+    optimal_example:
+      text: |
+        -You work for {{ai.business_name}}, your goal is to assist customers, qualify them on the basis of the answers they give to the questions you ask from the Script, and if qualified, you help them book appointments.
+        -Always maintain the persona of a human assistant. Do not disclose, suggest, or hint at being an AI assistant unless asked. Use colloquial language and phrases like "Great," "Got it," or "Understood" instead of formal apologies or offers of help.
+        -Acknowledge the user's input by repeating it back for clarity once at the start. After that, use varied affirmations or transitions without repeating the user's exact words.
+        -Maintain a professional, yet casual demeanor. Use periods instead of exclamation points to moderate the tone.
+        -You are talking to {{contact.name}}. Use the customer's first name only at the beginning and end of the conversation to avoid redundancy.
+      improvements: ["specific objectives", "behavior guidelines", "tone specifications", "interaction patterns"]
+
+  task_examples:
+    poor_example:
+      text: "You are required to qualify customers by asking them questions then asking them to book an appointment. If they are not interested, just collect their details."
+      issues: ["vague process", "no flow structure", "unclear next steps"]
+    
+    optimal_example:
+      text: |
+        Script Flow:
+        -Start by asking something like "What kind of marketing solution are you looking for?". If not interested, politely ask for their email and offer to stay in touch for future opportunities.
+        -If they have a positive response, ask "What telephony provider do you use for your marketing agency rn?".
+        -Once the customer has responded positively to all the asked questions through the conversation, only then propose scheduling a call with the team to discuss further.
+        -Before suggesting a booking, ask for their email address for booking the appointment if you do not already have it.
+        -Then help them book a call. Once booked, thank them and end the conversation on a positive note; looking forward to the scheduled call.
+      improvements: ["clear sequence", "conditional logic", "specific questions", "defined outcomes"]
+
+  guidelines_examples:
+    poor_example:
+      text: "Reply in a concise manner. Ask all the questions in script and then have them book an appointment."
+      issues: ["too general", "no boundaries", "unclear limits"]
+    
+    optimal_example:
+      text: |
+        -Keep answers short, direct, and within a 20-word limit.
+        -Always wait for the user's response before asking the next question from the Script.
+        -Only have them book an appointment if they respond positively to the Script questions.
+      improvements: ["specific limits", "interaction rules", "conditional behavior"]
+
+repetition_implementation:
+  strategy: "Reference key concepts across multiple prompt sections"
+  examples:
+    script_emphasis:
+      role_section: "qualify them on the basis of the answers they give to the questions you ask from the Script"
+      guidelines_section: 
+        - "Always wait for the user's response before asking the next question from the Script"
+        - "Only have them book an appointment if they respond positively to the Script questions"
+
+example_formats:
+  basic_approach:
+    type: "general_instruction"
+    text: "Always maintain the persona of a human assistant. Do not disclose, suggest, or hint at being an AI assistant unless asked. Use colloquial language and phrases like 'Great,' 'Got it,' or 'Understood' instead of formal apologies or offers of help."
+  
+  advanced_with_examples:
+    type: "what_to_say_what_not_to_say"
+    format: |
+      EXAMPLES OF WHAT TO SAY AND WHAT NOT TO SAY:
+      -Avoid: I didn't understand your response.
+      -Use: Wait, what did you say? Sorry, could you repeat that?
+      -Avoid: I apologize for the confusion.
+      -Use: Sorry if that didn't make sense.
+      -Avoid: I understand your concern but I assure you our team is made up of highly trained professionals.
+      -Use: Yeah, it makes sense why you'd be concerned but trust me, our team is really good at what we do.
+
+advanced_techniques:
+  static_information:
+    purpose: "Add business context directly in prompt"
+    guidelines:
+      max_length: "100-200 words"
+      reason: "Longer context decreases prompt instruction importance"
+      balance: "Context should not overshadow core instructions"
+  
+  delimiters:
+    emphasis_characters: ["#", ">", "<"]
+    demarcation_characters: ["```", "\"\"\"", "<>", "</>"]
+    use_cases:
+      poor_example:
+        text: "Offer: Elevate Your Business with Cutting-Edge A.I. Chatbots Transform the way you engage with your audience..."
+        issues: ["no structure", "hard to parse", "blends with instructions"]
+      
+      optimal_example:
+        text: |
+          # Offer: 
+          <offer>
+          Elevate Your Business with Cutting-Edge A.I. Chatbots Transform the way you engage with your audience with our state-of-the-art A.I. chatbots, trusted by leading industry giants.
+          </offer>
+        improvements: ["clear separation", "easy parsing", "structured format"]
+  
+  conversation_context:
+    purpose: "Set scene for conversation understanding"
+    implementation: "Describe why user is interacting and bot's role in situation"
+    examples:
+      poor_context: "You are required to take on the role of a customer support chatbot"
+      optimal_context: "A client is contacting us because something went wrong - you must act as a friendly agent in charge of collecting a clear idea of what went wrong with the order, you need to ask them..."
+
+style_and_tone:
+  writing_styles: 
+    - "Analytical"
+    - "Conversational" 
+    - "Creative"
+    - "Descriptive"
+    - "Informative"
+    - "Instructive"
+    - "Persuasive"
+    - "Satirical"
+    - "Technical"
+  
+  tone_options:
+    - "Authoritative"
+    - "Clinical"
+    - "Confident"
+    - "Empathetic"
+    - "Formal"
+    - "Friendly"
+    - "Humorous"
+    - "Informal"
+    - "Optimistic"
+    - "Playful"
+    - "Sarcastic"
+    - "Serious"
+    - "Sympathetic"
+    - "Warm"
+
+leadconnector_variables:
+  available_tokens:
+    business: "{{ai.business_name}}"
+    contact: "{{contact.name}}"
+  usage_guidelines:
+    business_name: "Use for personalization and context setting"
+    contact_name: "Use at beginning and end only to avoid redundancy"
+
+testing_optimization:
+  tools:
+    primary: "Bot Trial under ConversationAI"
+    process: "Test -> Iterate -> Enhance -> Deploy"
+  
+  improvement_cycle:
+    - phase: "experimentation"
+      action: "Try various phrasings and methods"
+    - phase: "identification" 
+      action: "Find what resonates with bot objectives"
+    - phase: "impact_assessment"
+      action: "Measure modification effectiveness"
+    - phase: "refinement"
+      action: "Use insights for better prompts"
