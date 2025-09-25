@@ -7,15 +7,20 @@ AI-driven voice and conversation agents for "Endlich zu Hause Finanzierungen Gmb
 ```
 KI Agents/
 ├── .github/
-│   └── copilot-instructions.md     # AI coding agent guidelines
+│   ├── copilot-instructions.md     # AI coding agent guidelines
+│   └── instructions/
+│       ├── conversation-agent.instructions.md
+│       ├── realtime-prompting-guide.md # Realtime voice prompting best practices
+│       └── voice-agent.instructions.md
 ├── Docs/                           # Business logic & frameworks (AI-friendly)
-│   ├── social-proof-types.yaml     # 5 types of social proof framework
+│   ├── ai-prompting-framework.yaml # AI prompting best practices
+│   ├── bot-goals-framework.yaml    # Conversation AI goal tracking
 │   ├── post-types-framework.yaml   # 6 fundamental content post types
-│   ├── ai-prompting-guide.md       # AI prompting best practices
-│   ├── bot-goals-guide.md          # Conversation AI goal tracking
-│   └── conversation-ai-v3-setup.md # Form-based AI setup guide
+│   └── social-proof-types.yaml     # 5 types of social proof framework
 ├── Voice Agent/
-│   └── Vivi KI Voice AI           # Main agent configuration & call flows
+│   ├── Finanzberater Coach AI.md   # Advanced communication coaching agent
+│   ├── Vivi KI Voice AI (FULL BACKUP).md
+│   └── Vivi KI Voice AI.md         # Main agent configuration & call flows
 └── Conversation Agent/            # (Future expansion)
 ```
 
