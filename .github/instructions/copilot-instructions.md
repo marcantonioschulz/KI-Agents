@@ -53,15 +53,29 @@ German-specific approach from `Voice Agent/Vivi KI Voice AI.md`:
 
 ### Three-Field Configuration (LeadConnector Optimized)
 Current Conversation AI uses this structure from `ai-prompting-framework.yaml`:
-- **Personality**: Agent character, tone, background, behavioral guidelines, professional context
-- **Goal**: Primary objectives, success criteria, conversation flow, phase structure
+- **Personality**: Agent character, tone, background, behavioral guidelines, professional context, conversation phases
+- **Goal**: Primary objectives, success criteria, target outcomes (MUST come after Personality, before Additional Information)
 - **Additional Information**: Safety rules, escalation procedures, tool usage, examples, operational details
 
+**CRITICAL**: V3 field order must be: **Personality** → **Goal** → **Additional Information**. This sequence is optimized for LeadConnector processing and ensures proper agent behavior.
+
 ### Field Mapping from Classic Framework
-When implementing agents, map framework elements to V3 fields:
-- **Role** (classic framework) → **Personality** field (V3)
-- **Task** (classic framework) → **Goal** field (V3)
-- **Guidelines** (classic framework) → **Additional Information** field (V3)
+When implementing agents, map framework elements to V3 fields in correct order:
+- **Role** (classic framework) → **Personality** field (V3) - includes conversation phases and agent identity
+- **Task** (classic framework) → **Goal** field (V3) - positioned after Personality content
+- **Guidelines** (classic framework) → **Additional Information** field (V3) - always last section
+
+**Structure Template**:
+```markdown
+## Personality
+[Agent identity, background, conversation phases 1-4]
+
+## Goal
+[Primary objectives and success criteria]
+
+## Additional Information
+[Rules, escalation, security, examples]
+```
 
 ### Realtime Voice Agent Structure (OpenAI API Optimized)
 Voice agents use expanded structure from `realtime-prompting-guide.md`:
