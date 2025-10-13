@@ -72,4 +72,4 @@ assignees: ''
 <!-- If you have ideas for how to fix this -->
 
 ---
-**Note**: For security-related issues, please also report via email to thomas@endlichzuhause.com
+**Note**: For security-related issues, please also report via email to marcantonio.schulz@endlichzuhause.com

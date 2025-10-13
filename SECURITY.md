@@ -8,7 +8,7 @@ We take the security of our AI agent configurations seriously, especially given 
 
 **Critical security issues** that could compromise customer data, financial information, or system integrity should be reported immediately via email to:
 
-**Security Contact**: [thomas@endlichzuhause.com](mailto:thomas@endlichzuhause.com)
+**Security Contact**: [marcantonio.schulz@endlichzuhause.com](mailto:marcantonio.schulz@endlichzuhause.com)
 
 ### 🔍 What Constitutes a Security Vulnerability
 

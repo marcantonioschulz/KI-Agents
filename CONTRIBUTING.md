@@ -147,7 +147,7 @@ By contributing, you agree that your contributions will be licensed under the sa
 
 ## 🤝 Code of Conduct
 
-This project adheres to a Code of Conduct. By participating, you are expected to uphold this code. Please report unacceptable behavior to [thomas@endlichzuhause.com](mailto:thomas@endlichzuhause.com).
+This project adheres to a Code of Conduct. By participating, you are expected to uphold this code. Please report unacceptable behavior to [marcantonio.schulz@endlichzuhause.com](mailto:marcantonio.schulz@endlichzuhause.com).
 
 ---
 
