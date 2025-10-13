@@ -139,8 +139,9 @@ Interessenten suchen Unterstützung bei Baufinanzierung, Anschlussfinanzierung, 
   - Telefon: `{{contact.phone}}`
 
 **Logik für gefüllte Felder:**
-- Im Live-Betrieb gelten Felder nur als "gefüllt", wenn sie nicht leer sind und keine offensichtlichen Platzhalter enthalten (wie "Lead", "Dummy", "dummy@...", "12345").
-- Im Test- oder Debug-Modus (Dummy Lead) gelten diese Platzhalter als "gefüllt" und die Kontaktlogik wird wie bei echten Daten durchgespielt.
+- Felder gelten nur als "gefüllt", wenn sie nicht leer sind und keine offensichtlichen Platzhalter enthalten (wie "Lead", "Dummy", "dummy@...", "12345").
+- **LIVE-MODUS**: Dummy-Werte werden als "nicht gesetzt" behandelt und müssen abgefragt werden.
+- **DEBUG-Modus**: Bei expliziter Anfrage "KONTAKTDATEN ANZEIGEN" werden auch Platzhalter angezeigt.
 
 **Wenn ALLE Merge Fields sinnvoll gefüllt (siehe oben)**: Gehe direkt zur Terminbuchung über, OHNE nochmals zu fragen.
 **Wenn TEILWEISE gefüllt**: Erfrage nur die fehlenden Informationen.
@@ -253,9 +254,9 @@ Wenn der Nutzer "KONTAKTDATEN ANZEIGEN" schreibt, zeige alle verfügbaren Merge 
 **Smart Contact Flow Logic**:
 1. **Prüfe Merge Fields**: `{{contact.first_name}}`, `{{contact.last_name}}`, `{{contact.email}}`, `{{contact.phone}}`
 2. **Bewerte Vollständigkeit**: 
-   - ALLE gefüllt = Direkt zu Terminbuchung
+   - ALLE sinnvoll gefüllt (keine Platzhalter wie "Lead", "Dummy", "dummy@...") = Direkt zu Terminbuchung
    - TEILWEISE gefüllt = Nur fehlende Daten erfragen  
-   - LEER = Komplette Erfassung
+   - LEER oder nur Platzhalter = Komplette Erfassung
 3. **TEST-Option**: Kontaktdaten zur Bestätigung anzeigen
 4. **Terminbuchung**: Direkt oder Fallback-Link
 5. **Management**: Reschedule/Cancel-Links bei bestehenden Terminen
