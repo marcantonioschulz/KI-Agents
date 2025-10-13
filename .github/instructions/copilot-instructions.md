@@ -7,7 +7,7 @@ This codebase manages AI-driven voice and conversation agents for "Endlich zu Ha
 
 ### Agent Configuration Pattern
 - **Primary Voice Agent**: `Voice Agent/Vivi KI Voice AI.md` - Complete operative prompt with OpenAI Realtime API optimizations for phone interactions
-- **Primary Conversation Agent**: `Conversation Agent/Vivi KI Conversation AI` - Uses V3 three-field structure (Personality, Goal, Additional Information)
+- **Primary Conversation Agent**: `Conversation Agent/Vivi KI Conversation AI.md` - Uses V3 three-field structure (Personality, Goal, Additional Information)
 - **Coaching Agent**: `Voice Agent/Finanzberater Coach AI.md` - Multi-phase training simulator for advisor skill development
 - **Critical Rule**: Agents can ONLY use information explicitly provided in prompts/tools - no inference, assumptions, or external suggestions allowed
 - **Call Flow**: 4-phase structured process: Greeting → Identification (with spelling verification) → Discovery & Data Collection → Finalization & Close
@@ -135,7 +135,7 @@ Conversation Agent Structure (V3):
 
 ### Primary Reference Implementations
 - **`Voice Agent/Vivi KI Voice AI.md`**: Production-ready operative prompt with OpenAI Realtime API optimization
-- **`Conversation Agent/Vivi KI Conversation AI`**: Complete V3 three-field implementation for LeadConnector
+- **`Conversation Agent/Vivi KI Conversation AI.md`**: Complete V3 three-field implementation for LeadConnector
 - **`Voice Agent/Finanzberater Coach AI.md`**: Multi-phase coaching simulator with scenario banking
 - **`Knowledge Base/Kunden/Vivi KI Knowledge.md`**: Business context, team directory, and escalation procedures
 

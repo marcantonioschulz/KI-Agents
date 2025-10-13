@@ -87,7 +87,7 @@ Follow conventional commits:
 
 ### Naming Conventions
 - **Voice agents**: `{Purpose} AI.md` (e.g., "Vivi KI Voice AI.md")
-- **Conversation agents**: `{Purpose}` (no extension, e.g., "Vivi KI Conversation AI")
+- **Conversation agents**: `{Purpose}.md` (e.g., "Vivi KI Conversation AI.md")
 - **Frameworks**: `{topic}-framework.yaml`
 - **Knowledge bases**: `{Customer/Partner} Knowledge.md`
 

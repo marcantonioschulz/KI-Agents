@@ -23,7 +23,7 @@ Every configuration is battle-tested in production and optimized for **OpenAI Re
 - 🏋️ [**Finanzberater Coach** - Training & Simulation](Voice%20Agent/Finanzberater%20Coach%20AI.md)
 
 **Für Conversation Agents (Chat/Text):**
-- 💬 [**Vivi KI Conversation Agent** - Hauptprompt für Text-Chat](Conversation%20Agent/Vivi%20KI%20Conversation%20AI)
+- 💬 [**Vivi KI Conversation Agent** - Hauptprompt für Text-Chat](Conversation%20Agent/Vivi%20KI%20Conversation%20AI.md)
 
 **Knowledge Base & Frameworks:**
 - 📚 [**Vivi KI Knowledge Base** - Wissenssammlung](Knowledge%20Base/Kunden/Vivi%20KI%20Knowledge.md)
@@ -48,7 +48,7 @@ Every configuration is battle-tested in production and optimized for **OpenAI Re
 
 ### Für Entwickler
 1. **Review Vivi KI Voice Agent** – [`Voice Agent/Vivi KI Voice AI.md`](Voice%20Agent/Vivi%20KI%20Voice%20AI.md) contains the operational prompt for the message-taking assistant.
-2. **Check Vivi KI Conversation Agent** – [`Conversation Agent/Vivi KI Conversation AI`](Conversation%20Agent/Vivi%20KI%20Conversation%20AI) shows the V3 three-field implementation for text-based interactions.
+2. **Check Vivi KI Conversation Agent** – [`Conversation Agent/Vivi KI Conversation AI.md`](Conversation%20Agent/Vivi%20KI%20Conversation%20AI.md) shows the V3 three-field implementation for text-based interactions.
 3. **Explore the Finanzberater Masterclass** – [`Voice Agent/Finanzberater Coach AI.md`](Voice%20Agent/Finanzberater%20Coach%20AI.md) packs the simulation cycle, feedback scoring, and scenario templates.
 4. **Check the prompting frameworks** – documentation in [`Docs/`](Docs/) captures reusable rules, merge fields, and realtime prompting guidance.
 
@@ -73,7 +73,7 @@ KI Agents/
 │   ├── Vivi KI Voice AI.md
 │   └── Vivi KI Voice AI (FULL BACKUP).md
 ├── Conversation Agent/
-│   └── Vivi KI Conversation AI
+│   └── Vivi KI Conversation AI.md
 └── Knowledge Base/
     ├── Kunden/
     │   └── Vivi KI Knowledge.md
