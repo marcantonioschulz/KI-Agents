@@ -1,0 +1,175 @@
+# Conversation AI: Bot Goals (V2) & Guided Form Setup (V3)
+
+## 📘 Bot Goals Feature (Conversation AI V2)
+*Stand: 9. März 2025*
+
+### Inhaltsverzeichnis
+- Einführung  
+- Wichtige Änderungen in der neuen Version  
+- Schritt-für-Schritt-Anleitung  
+  - Schritt 1: Zugriff auf die Bot Goals Funktion  
+  - Schritt 2: Navigation in der Bot-Oberfläche  
+  - Schritt 3: Anpassung deiner Bot-Ziele  
+  - Unterfunktionen innerhalb von Bot Goals  
+  - Schritt 4: Finalisierung des Bots
+
+---
+
+### Einführung
+Die **Bot Goals**-Funktion ist eine umfassende Aktualisierung der bisherigen *Configure Intent*-Funktion in Conversation AI.  
+Sie ermöglicht das **Bearbeiten und Aktualisieren von Prompts** für neue oder bestehende Bots.  
+Neue Unterfunktionen wie **Trigger a Workflow** und **Update Contact Info** werden bald hinzugefügt.
+
+Zudem wurde die frühere *Bot Trial*-Funktion integriert und heißt nun **Test Your Bot**, um ein einheitliches Nutzererlebnis zu schaffen.
+
+---
+
+### Wichtige Änderungen
+#### 🔹 Unterstützung mehrerer Bots
+Im Gegensatz zur alten Version mit nur einem Bot erlaubt die neue Version **mehrere Bots gleichzeitig** – etwa für:
+- Allgemeine Anfragen (Q&A)
+- Terminbuchungen
+- Spezielle Aufgabenbereiche
+
+---
+
+### Schritt-für-Schritt-Anleitung
+
+#### Schritt 1: Zugriff auf die Bot Goals Funktion
+1. Erstelle einen neuen Bot oder bearbeite einen bestehenden.
+2. Vergib einen eindeutigen **Namen**, bevor du fortfährst.
+
+#### Schritt 2: Navigation in der Bot-Oberfläche
+Nach Auswahl eines Bots gibt es drei Tabs:
+- **Bot Settings:** Keine Änderungen.
+- **Bot Training:** Keine Änderungen.
+- **Bot Goals:** Neu, mit Subfunktionen wie Workflow-Auslösung oder Kontaktaktualisierung.  
+  Außerdem ist *Test Your Bot* nun hier integriert.
+
+#### Schritt 3: Anpassung der Bot-Ziele
+Im **Bot Goals**-Tab können AI-Prompts angepasst werden.  
+Für jedes Ziel muss ein eigener Bot und Prompt erstellt werden.
+
+---
+
+### Unterfunktionen innerhalb von Bot Goals
+
+1. **Appointment Booking:**  
+   Nach erfolgreicher Terminbuchung kann der Chat automatisch an einen anderen Bot übergeben werden („Transfer Employee Post Appointment Booking“).
+
+2. **Trigger a Workflow:**  
+   Automatisiert Aktionen basierend auf bestimmten Gesprächsbedingungen.
+
+3. **Add Contact Info:**  
+   Ermöglicht das direkte Aktualisieren von Kontaktinformationen im Chat.
+
+---
+
+### Schritt 4: Finalisierung
+Nach Anpassung der Prompts:
+- **Speichern (Save)** klicken.
+- Der Bot geht **live** und steht sofort zur Verfügung.
+
+---
+
+## 🤖 Conversation AI V3 – Guided Form Based Setup
+*Stand: 30. Juni 2025*
+
+### Inhaltsverzeichnis
+- Einführung  
+- Warum dieses Setup?  
+- Schritt-für-Schritt-Anleitung  
+  - Schritt 1: Create Bot Page  
+  - Schritt 2: Brandinformationen (optional)  
+  - Schritt 3: Grundeinstellungen  
+  - Schritt 4: Ziele & Fragen  
+  - Schritt 5: Final Review & Zusatzoptionen  
+  - Schritt 6: Aktionen  
+- Zusammenfassung
+
+---
+
+### Einführung
+Das neue **Guided Form Setup** revolutioniert die Bot-Erstellung:
+- Kein Prompting erforderlich  
+- Klare Ziele statt komplexer Befehle  
+- Einrichtung in unter 3 Minuten
+
+Es ist ideal für **Lead-Erfassung, Qualifizierung, Datensammlung oder Terminbuchung**.
+
+---
+
+### Warum dieses Setup?
+Das manuelle Schreiben von Prompts war oft zeitaufwendig.  
+Der neue **Form Bot** löst dieses Problem mit einer strukturierten, intuitiven Oberfläche.
+
+**Vorteile:**
+- Schneller Setup-Prozess (unter 3 Minuten)
+- Konsistente Ergebnisse
+- Keine Prompt-Kenntnisse nötig
+
+---
+
+### Schritt-für-Schritt-Anleitung
+
+#### Schritt 1: Create Bot Page
+1. Gehe zu **Conversation AI > Bots** → **Create Bot**
+2. Standardmäßig öffnet sich der *Guided Form Flow*.  
+   Optional: Wechsel zur klassischen Prompt-basierten Variante über das Dropdown.
+
+#### Schritt 2: Brandinformationen (optional)
+Trage optional deine Markeninfos ein:
+- Firmenname, Website, Adresse, E-Mail, Telefonnummer, Öffnungszeiten
+- Tone of Voice (z. B. freundlich, professionell)
+
+Diese Daten verbessern die Qualität und Konsistenz der Bot-Antworten.
+
+#### Schritt 3: Grundeinstellungen
+Lege fest:
+- **Initial Message:** Erste Begrüßung an neue Kontakte
+- Sprache, Name, Verhaltenstyp
+- Kommunikationskanäle (Instagram, Facebook, SMS usw.)
+
+---
+
+### Schritt 4: Ziele & Fragen
+Definiere die **Ziele** deines Bots, z. B.:
+- Name abfragen  
+- E-Mail erfassen  
+- Telefonnummer sammeln  
+- Webseite des Kunden erfragen  
+- Aktuelles Anliegen verstehen  
+
+Funktion: *„Skip if already filled“* verhindert doppelte Abfragen.
+
+Die Reihenfolge kann per **Drag & Drop** geändert werden.
+
+---
+
+### Schritt 5: Final Review & Zusatzoptionen
+Vor dem Veröffentlichen:
+- Überprüfe die Einstellungen.
+- Optional: „Additional Instructions“ hinzufügen, um den Bot gezielt zu steuern.
+
+---
+
+### Schritt 6: Aktionen
+1. **Appointment Booking** aktivieren, um Termine zu buchen.  
+2. **Workflow nach Buchung auslösen** (z. B. „Bot status test“).  
+3. **E-Mail-Benachrichtigung aktivieren**, falls der Bot keine Antwort weiß.  
+
+Zukünftige Aktionen werden kontinuierlich ergänzt.
+
+---
+
+### Zusammenfassung
+Der Guided Form Bot macht KI-gestützte Chatbots **für alle zugänglich**:
+- Keine Prompts nötig  
+- Fokus auf das Ziel, nicht die Technik  
+- In wenigen Minuten einsatzbereit  
+
+> **Keine Komplexität. Kein Rätselraten. Nur Ergebnisse.**
+
+---
+
+© LeadConnector 2025 – Conversation AI Documentation

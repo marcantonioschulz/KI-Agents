@@ -1,4 +1,3 @@
-
 # Copilot Instructions for AI Coding Agents
 
 This codebase manages AI-driven voice and conversation agents for "Endlich zu Hause Finanzierungen GmbH" customer support automation. The architecture prioritizes machine-readable documentation and strict agent behavior guidelines.
@@ -6,7 +5,8 @@ This codebase manages AI-driven voice and conversation agents for "Endlich zu Ha
 ## 1. Core Architecture
 
 ### Agent Configuration Pattern
-- **Primary Agent**: `Voice Agent/Vivi KI Voice AI.md` - Contains complete agent persona, objectives, and call flow scripts
+- **Primary Voice Agent**: `Voice Agent/Vivi KI Voice AI.md` - Contains complete agent persona, objectives, and call flow scripts
+- **Primary Conversation Agent**: `Conversation Agent/Vivi KI Conversation AI` - Uses V3 three-field structure (Personality, Goal, Additional Information)
 - **Critical Rule**: Agent can ONLY use information explicitly provided in prompts/tools - no inference, assumptions, or external suggestions allowed
 - **Call Flow**: 4-step structured process: Name gathering → Name confirmation (character-by-character) → Issue identification → Callback assurance
 
@@ -31,7 +31,21 @@ Example from `Voice Agent/Vivi KI Voice AI.md`:
 - Full name: "That's John Wayne, J O H N … W A Y N E, right?"
 - No explanatory text about why you're confirming
 
-## 3. YAML Framework Integration
+## 3. Conversation AI V3 Structure
+
+### Three-Field Configuration
+Current Conversation AI uses this structure:
+- **Personality**: Agent character, tone, background, behavioral guidelines
+- **Goal**: Primary objectives, success criteria, conversation flow
+- **Additional Information**: Safety rules, escalation procedures, tool usage, examples
+
+### Field Mapping from Frameworks
+When implementing agents, map framework elements to V3 fields:
+- `ai-prompting-framework.yaml` Role → Personality field
+- `ai-prompting-framework.yaml` Task → Goal field  
+- `ai-prompting-framework.yaml` Guidelines → Additional Information field
+
+## 4. YAML Framework Integration
 
 ### Social Proof Implementation (`Docs/social-proof-types.yaml`)
 - 5 types: "I Did This", "You Are Good", "Authority", "Organic Social", "Results-Based"
@@ -47,16 +61,20 @@ Example from `Voice Agent/Vivi KI Voice AI.md`:
 - LeadConnector-specific prompting guidelines
 - Required components: `role`, `task`, `guidelines`
 - Best practices: `repetition`, `examples_illustrations`, `iterative_improvement`
+- Adapt to V3 three-field structure when implementing
 
-## 4. Development Patterns
+## 5. Development Patterns
 
 ### File Organization
-- Agent configurations: Markdown format in `Voice Agent/`
+- Voice agent configurations: Markdown format in `Voice Agent/`
+- Conversation agent configurations: Three-field format in `Conversation Agent/`
 - Business frameworks: YAML format in `Docs/`
 - Each YAML includes `metadata` section with purpose and optimization info
 
 ### Agent Logic Extensions
-- When adding new agents, follow the strict constraint model from `Vivi KI Voice AI.md`
+- When adding new agents, follow the strict constraint model from existing agents
+- For voice agents: Use structured markdown format from `Vivi KI Voice AI.md`
+- For conversation agents: Use three-field V3 structure from `Vivi KI Conversation AI`
 - Document tool triggers and callback behaviors explicitly
 - Reference appropriate YAML frameworks for business context
 
@@ -64,13 +82,15 @@ Example from `Voice Agent/Vivi KI Voice AI.md`:
 - All external integrations must be documented with explicit information boundaries
 - Use structured YAML for any new business logic or customer psychology frameworks
 - Maintain machine-readable format for AI agent consumption
+- Map framework elements to appropriate V3 fields for conversation agents
 
-## 5. Key Files for Context
-- `Voice Agent/Vivi KI Voice AI.md`: Complete agent implementation example
+## 6. Key Files for Context
+- `Voice Agent/Vivi KI Voice AI.md`: Complete voice agent implementation example
+- `Conversation Agent/Vivi KI Conversation AI`: Complete conversation agent V3 implementation example
 - `Docs/ai-prompting-framework.yaml`: Technical prompting guidelines
 - `Docs/social-proof-types.yaml`: Customer psychology reference
 - `README.md`: Project overview and quick start guide
 
 ---
 
-When modifying agent behavior, always reference the strict information boundaries and callback patterns established in the core voice agent configuration.
+When modifying agent behavior, always reference the strict information boundaries and callback patterns established in the core agent configurations. For conversation agents, ensure proper mapping to the V3 three-field structure.
