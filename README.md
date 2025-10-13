@@ -1,6 +1,20 @@
 # KI Agents Repository
 
-Configuration-as-code for the voice agents, coaching simulations, and prompting frameworks that power "Endlich zu Hause Finanzierungen GmbH". Every file is written so AI systems can apply the guidance without additional interpretation.
+**Production-ready AI agent configurations for German financial services automation**
+
+This repository contains enterprise-grade AI agent prompts, conversation flows, and business frameworks specifically designed for **Endlich zu Hause Finanzierungen GmbH** - a leading German mortgage and building finance company. 
+
+## 🎯 Project Goals
+
+Our mission is to provide **reliable, compliant, and culturally-appropriate AI automation** for German financial services through:
+
+- **🤖 Voice & Chat Agents**: Production-tested prompts for customer phone calls and text interactions
+- **📋 Conversation Frameworks**: Structured approaches ensuring consistent, professional customer experiences  
+- **🔒 Compliance-First Design**: Built-in information boundaries, data protection, and financial services compliance
+- **🇩🇪 German Market Focus**: Culturally-appropriate communication patterns, TTS optimization, and business etiquette
+- **📚 Documentation-as-Code**: Machine-readable business logic and prompting frameworks for easy AI implementation
+
+Every configuration is battle-tested in production and optimized for **OpenAI Realtime API** (voice) and **LeadConnector V3** (conversation) platforms.
 
 ## 🚀 Direkter Zugang zu den Prompts
 
