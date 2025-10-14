@@ -8,6 +8,7 @@ This codebase manages AI-driven voice and conversation agents for "Endlich zu Ha
 ### Agent Configuration Pattern
 - **Primary Voice Agent**: `Voice Agent/Vivi KI Voice AI.md` - Complete operative prompt with OpenAI Realtime API optimizations for phone interactions
 - **Primary Conversation Agent**: `Conversation Agent/Vivi KI Conversation AI.md` - Uses V3 three-field structure (Personality, Goal, Additional Information)
+- **Automation Prompts**: `Automationsprompts/` - Workflow-specific prompts for CRM integrations and business logic automation
 - **Coaching Agent**: `Voice Agent/Finanzberater Coach AI.md` - Multi-phase training simulator for advisor skill development
 - **Critical Rule**: Agents can ONLY use information explicitly provided in prompts/tools - no inference, assumptions, or external suggestions allowed
 - **Call Flow**: 4-phase structured process: Greeting → Identification (with spelling verification) → Discovery & Data Collection → Finalization & Close
@@ -18,11 +19,12 @@ This codebase manages AI-driven voice and conversation agents for "Endlich zu Ha
 - **Core Services**: Baufinanzierung, Anschlussfinanzierung, Umschuldung, Zwischenfinanzierung, Neubau financing
 - **Target Market**: German-speaking customers seeking mortgage and building finance solutions
 
-### Documentation-as-Code Approach
-- `Docs/` contains business logic in machine-parseable YAML format with structured metadata
-- Each YAML file represents a complete framework (social proof, content strategy, AI prompting, bot goals)
-- Documentation optimized for AI consumption with `metadata` sections defining purpose and optimization targets
-- Knowledge base in `Knowledge Base/` provides business context and team directory for proper escalation
+### Documentation Architecture
+- **`Docs/ai-prompting-framework.yaml`**: V3 structure mapping and LeadConnector optimization guidelines
+- **`Docs/automation-framework.yaml`**: Comprehensive automation standards, integration patterns, and quality requirements
+- **`Docs/realtime-prompting-guide.md`**: OpenAI Realtime API best practices and TTS optimization
+- **`Docs/social-proof-types.yaml`**: Customer psychology framework for German financial services
+- **`Docs/bot-goals-framework.yaml`**: Measurable objective definitions for agent performance
 
 ## 2. Critical Business Rules & Compliance
 
@@ -173,6 +175,30 @@ Conversation Agent Structure (V3):
 
 ---
 
-**Critical Development Rule**: When modifying agent behavior, always reference the strict information boundaries, callback patterns, and phase structures established in the production agent configurations. Voice agents require TTS testing, conversation agents need V3 structure validation, and all changes must maintain the "message-taker only" paradigm with 24-hour callback commitments.
+## Automation Prompt Guidelines
+
+### Automation-Specific Rules
+- **Output Precision**: Automation prompts MUST return exact, parseable formats for IF-ELSE conditions
+- **No Explanations**: Pure output values (e.g., A-LEAD, B-LEAD, C-LEAD) without additional text or formatting
+- **Error Handling**: Include explicit fallback classifications for edge cases and incomplete data
+- **Testing Requirements**: All automation prompts need minimum 5 sample input/output pairs for validation
+- **Language Consistency**: German primary with universal fallback handling for unclear inputs
+
+### Integration Points
+- **CRM Field Updates**: Use `{{contact.*}}` merge fields consistently across all automation workflows
+- **Workflow Triggers**: Define clear trigger conditions and expected automation responses
+- **Platform Compatibility**: Follow GoHighLevel 3000-word limits and LeadConnector V3 structure requirements
+- **Validation Schema**: Include JSON schema or regex patterns for output format verification
+
+### Automation Development Workflow
+1. **Requirements Definition**: Clear automation goal and success criteria from `Docs/automation-framework.yaml`
+2. **Prompt Design**: Structured template with examples from `Automationsprompts/templates/`
+3. **Testing Phase**: Validate with sample data, edge cases, and platform integration
+4. **Documentation**: Complete integration instructions and troubleshooting guides
+5. **Monitoring**: Performance tracking and iterative improvement based on real-world usage
+
+---
+
+**Critical Development Rule**: When modifying agent behavior, always reference the strict information boundaries, callback patterns, and phase structures established in the production agent configurations. Voice agents require TTS testing, conversation agents need V3 structure validation, automation prompts need exact output format compliance, and all changes must maintain the "message-taker only" paradigm with 24-hour callback commitments.
 
 ````

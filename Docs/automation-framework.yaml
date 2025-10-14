@@ -1,0 +1,120 @@
+# Automation Framework für KI Agents
+# Version: 1.0
+# Datum: 14. Oktober 2025
+
+automation_types:
+  classification:
+    purpose: "Kategorisierung und Lead-Scoring für CRM-Workflows"
+    input_format: "Strukturierte Kundendaten (JSON/Form Fields)"
+    output_format: "Eindeutige Labels/Scores (A-LEAD, B-LEAD, C-LEAD)"
+    use_cases:
+      - "Lead Qualification"
+      - "Priority Assignment" 
+      - "Routing zu passenden Beratern"
+    integration_platforms: ["GoHighLevel", "LeadConnector"]
+    
+  sequence_generation:
+    purpose: "Dynamische E-Mail/SMS-Sequenzen basierend auf Kundenkontext"
+    input_format: "Customer context + message templates + merge fields"
+    output_format: "Personalisierte Nachrichten (Text/HTML)"
+    use_cases:
+      - "Follow-up E-Mails nach Terminen"
+      - "Nurturing-Sequenzen für verschiedene Lead-Typen"
+      - "Onboarding-E-Mails für neue Kunden"
+    merge_fields: ["{{contact.first_name}}", "{{contact.email}}", "{{contact.phone}}"]
+    
+  workflow_orchestration:
+    purpose: "Multi-step Automation Steuerung und Entscheidungslogik"
+    input_format: "Trigger events + business rules + customer state"
+    output_format: "Workflow-Aktionen (next_step, assign_tag, send_message)"
+    use_cases:
+      - "Appointment Reminder Flows"
+      - "Lead Temperature Tracking"
+      - "Escalation Management"
+    
+  content_personalization:
+    purpose: "Dynamische Inhalte basierend auf Kundenprofil"
+    input_format: "Customer data + content templates"
+    output_format: "Personalisierte Dokumente/Nachrichten"
+    use_cases:
+      - "Individuelle Finanzierungsvorschläge"
+      - "Personalisierte Landing Pages"
+      - "Maßgeschneiderte Angebote"
+
+quality_standards:
+  output_precision:
+    requirement: "EXACT format matching für IF-ELSE conditions"
+    no_explanations: "Reine Output-Werte ohne zusätzliche Texte"
+    fallback_handling: "Definierte Standardwerte für Edge Cases"
+    
+  language_handling:
+    primary: "Deutsch"
+    fallback: "Englisch für unklare Inputs"
+    consistency: "Einheitliche Terminologie across all prompts"
+    
+  testing_requirements:
+    sample_data: "Mindestens 5 realistische Test-Inputs"
+    edge_cases: "Grenzfälle und unvollständige Daten testen"
+    validation: "Expected vs. Actual Output Comparison"
+
+integration_guidelines:
+  crm_fields:
+    standard_merge_fields:
+      - "{{contact.first_name}}"
+      - "{{contact.last_name}}"
+      - "{{contact.email}}"
+      - "{{contact.phone}}"
+      - "{{appointment.reschedule_link}}"
+      - "{{appointment.cancellation_link}}"
+    
+  workflow_triggers:
+    common_events:
+      - "form_submission"
+      - "appointment_booking" 
+      - "email_opened"
+      - "link_clicked"
+      - "tag_applied"
+    
+  error_handling:
+    missing_data: "Graceful degradation with defaults"
+    invalid_format: "Fallback to safe classification"
+    timeout: "Return last known good state"
+
+platform_specifics:
+  gohighlevel:
+    max_prompt_length: "3000 words"
+    supported_formats: ["plain text", "markdown"]
+    webhook_integration: true
+    
+  leadconnector:
+    v3_structure: ["Personality", "Goal", "Additional Information"]
+    merge_field_syntax: "{{field.subfield}}"
+    conversation_ai: true
+    
+  openai_api:
+    recommended_models: ["gpt-4", "gpt-3.5-turbo"]
+    temperature_settings:
+      classification: 0.1
+      content_generation: 0.7
+      creative_writing: 0.9
+
+development_workflow:
+  phases:
+    1_requirements: "Define automation goal and success criteria"
+    2_prompt_design: "Create structured prompt with examples"
+    3_testing: "Validate with sample data and edge cases"
+    4_integration: "Configure in target platform"
+    5_monitoring: "Track performance and iterate"
+    
+  version_control:
+    naming: "prompt-name-automation-v{version}.md"
+    changelog: "Document changes and reasons"
+    backward_compatibility: "Ensure smooth transitions"
+    
+  documentation:
+    required_sections:
+      - "Purpose and Use Case"
+      - "Input/Output Specifications"
+      - "Integration Instructions"
+      - "Test Cases and Validation"
+      - "Troubleshooting Guide"
