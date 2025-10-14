@@ -1,9 +1,9 @@
-# Lead Classification Automation Prompt V2.0
+# Lead Classification Automation Prompt V3.0
 
 ## Metadata
 ```yaml
 purpose: "GoHighLevel Workflow Integration - Lead Qualification"
-version: "2.0"
+version: "3.0"
 output_format: "Single classification token"
 integration_point: "IF-ELSE automation conditions" 
 language: "German primary, universal fallback"

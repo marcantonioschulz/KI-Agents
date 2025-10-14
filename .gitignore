@@ -1,0 +1,68 @@
+# KI Agents Repository - .gitignore
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary Files
+*~
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# IDE & Editor Files
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Backup Files
+*.backup
+*.bak
+*_backup_*
+*_BACKUP_*
+
+# Log Files
+*.log
+logs/
+*.log.*
+
+# Environment & Secrets
+.env
+.env.local
+.env.production
+.env.staging
+config/secrets/
+api-keys/
+credentials/
+
+# AI Model Cache
+.cache/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Workspace Specific
+**/untitled*
+**/*_draft_*
+**/*_test_*
+testing/outputs/
+debug/
+
+# Documentation Build
+docs/build/
+site/
+
+# Automation Testing
+automation-tests/outputs/
+test-results/
+performance-logs/

@@ -1,0 +1,148 @@
+# LeadConnector Integration Configuration
+
+# API Configuration
+leadconnector_config:
+  api_version: "v3"
+  base_url: "https://services.leadconnector.io/v3"
+  authentication:
+    type: "Bearer Token"
+    header: "Authorization"
+    
+  endpoints:
+    conversations: "/conversations"
+    contacts: "/contacts"
+    workflows: "/workflows"
+    
+  conversation_ai_structure:
+    personality: "WHO the bot is and HOW it behaves"
+    goal: "WHAT the bot should achieve"
+    additional_information: "CONTEXT, rules, and business logic"
+
+# V3 Structure Mapping
+v3_structure:
+  personality:
+    character_definition: true
+    tone_guidelines: true
+    behavioral_rules: true
+    background_context: true
+    
+  goal:
+    primary_objectives: true
+    success_criteria: true
+    conversation_flow: true
+    call_to_action: true
+    
+  additional_information:
+    safety_rules: true
+    escalation_procedures: true
+    tool_usage_instructions: true
+    examples_and_scenarios: true
+    merge_field_integration: true
+
+# Merge Field Configuration
+merge_fields:
+  standard_contact_fields:
+    - "{{contact.first_name}}"
+    - "{{contact.last_name}}"
+    - "{{contact.email}}"
+    - "{{contact.phone}}"
+    - "{{contact.company}}"
+    - "{{contact.lead_source}}"
+    
+  appointment_fields:
+    - "{{appointment.date}}"
+    - "{{appointment.time}}"
+    - "{{appointment.reschedule_link}}"
+    - "{{appointment.cancellation_link}}"
+    
+  custom_finance_fields:
+    - "{{contact.eigenkapital}}"
+    - "{{contact.projekt_typ}}"
+    - "{{contact.finanzierungssumme}}"
+    - "{{contact.einkommen}}"
+    - "{{contact.bonitaet}}"
+    - "{{contact.zeitfenster}}"
+
+# Conversation Flow Configuration
+conversation_flows:
+  lead_qualification:
+    trigger: "New conversation started"
+    steps:
+      1: "Greeting and introduction"
+      2: "Contact data verification"
+      3: "Project discovery"
+      4: "Appointment scheduling"
+      5: "Confirmation and next steps"
+      
+  appointment_management:
+    trigger: "Existing appointment detected"
+    steps:
+      1: "Appointment confirmation"
+      2: "Reschedule/cancel options"
+      3: "Preparation guidance"
+      
+  nurturing_sequence:
+    trigger: "Classification completed"
+    branches:
+      A-LEAD: "immediate_contact_sequence"
+      B-LEAD: "standard_nurturing_sequence"
+      C-LEAD: "educational_content_sequence"
+
+# Integration Patterns
+integration_patterns:
+  classification_integration:
+    input_source: "conversation_context"
+    processing: "ai_prompt_automation"
+    output_destination: "workflow_branching"
+    
+  content_generation:
+    input_source: "contact_data + templates"
+    processing: "dynamic_personalization"
+    output_destination: "message_delivery"
+    
+  appointment_booking:
+    input_source: "calendar_availability"
+    processing: "scheduling_logic"
+    output_destination: "calendar_integration"
+
+# Quality Standards
+quality_standards:
+  conversation_consistency:
+    temperature_setting: 0.3
+    response_variation: "controlled"
+    brand_voice_adherence: "strict"
+    
+  response_timing:
+    max_response_time: "2 seconds"
+    typing_indicator: true
+    message_chunking: "smart_breaks"
+    
+  fallback_handling:
+    unknown_intent: "clarification_request"
+    technical_error: "graceful_degradation"
+    escalation_trigger: "human_handoff"
+
+# Testing Framework
+testing_framework:
+  conversation_scenarios:
+    - name: "Happy Path - Complete Flow"
+      description: "Standard conversation with all required information"
+      expected_outcome: "Successful appointment booking"
+      
+    - name: "Incomplete Information"
+      description: "Missing key contact or project details"
+      expected_outcome: "Guided information collection"
+      
+    - name: "Appointment Management"
+      description: "Existing appointment modification requests"
+      expected_outcome: "Successful reschedule/cancel"
+      
+    - name: "Escalation Scenarios"
+      description: "Complex questions requiring human intervention"
+      expected_outcome: "Smooth handoff to human agent"
+      
+  validation_criteria:
+    merge_field_accuracy: "100%"
+    conversation_flow_completion: ">90%"
+    user_satisfaction_simulation: ">85%"
+    response_time_compliance: "<2s average"

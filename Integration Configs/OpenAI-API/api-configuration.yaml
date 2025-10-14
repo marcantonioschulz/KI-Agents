@@ -1,0 +1,158 @@
+# OpenAI API Configuration
+
+# API Configuration
+openai_config:
+  api_version: "v1"
+  base_url: "https://api.openai.com/v1"
+  authentication:
+    type: "Bearer Token"
+    header: "Authorization"
+    
+  models:
+    conversation_ai: "gpt-4"
+    lead_classification: "gpt-4"
+    content_generation: "gpt-4"
+    voice_realtime: "gpt-4-realtime-preview"
+    
+  rate_limits:
+    requests_per_minute: 3500
+    tokens_per_minute: 350000
+    
+# Model Configuration per Use Case
+model_configurations:
+  lead_classification:
+    model: "gpt-4"
+    temperature: 0.1
+    max_tokens: 10
+    top_p: 0.95
+    frequency_penalty: 0.0
+    presence_penalty: 0.0
+    purpose: "Consistent, deterministic classification"
+    
+  content_generation:
+    model: "gpt-4"
+    temperature: 0.7
+    max_tokens: 500
+    top_p: 0.9
+    frequency_penalty: 0.2
+    presence_penalty: 0.1
+    purpose: "Creative, personalized content"
+    
+  conversation_ai:
+    model: "gpt-4"
+    temperature: 0.5
+    max_tokens: 300
+    top_p: 0.9
+    frequency_penalty: 0.1
+    presence_penalty: 0.1
+    purpose: "Natural, helpful conversations"
+    
+  voice_realtime:
+    model: "gpt-4-realtime-preview"
+    voice: "alloy"
+    temperature: 0.4
+    max_tokens: 200
+    turn_detection: "server_vad"
+    purpose: "Real-time voice interactions"
+
+# Prompt Engineering Guidelines
+prompt_engineering:
+  structure_standards:
+    system_role: "Clear identity and capabilities"
+    task_definition: "Specific, measurable objectives"
+    context_provision: "Relevant background information"
+    output_format: "Exact format requirements"
+    examples: "Representative input/output pairs"
+    
+  quality_requirements:
+    clarity: "Unambiguous instructions"
+    consistency: "Reproducible outputs"
+    completeness: "All edge cases covered"
+    efficiency: "Minimal token usage"
+    
+  testing_methodology:
+    unit_testing: "Individual prompt components"
+    integration_testing: "End-to-end workflows"
+    performance_testing: "Response time and quality"
+    edge_case_testing: "Unusual inputs and scenarios"
+
+# Integration Patterns
+api_integration:
+  request_format:
+    headers:
+      Content-Type: "application/json"
+      Authorization: "Bearer {{api_key}}"
+    
+    standard_payload:
+      model: "{{model_name}}"
+      messages: "{{conversation_history}}"
+      temperature: "{{temperature_setting}}"
+      max_tokens: "{{token_limit}}"
+      
+  response_handling:
+    success_codes: [200]
+    error_codes: [400, 401, 429, 500, 503]
+    retry_logic: "exponential_backoff"
+    timeout_handling: "graceful_fallback"
+    
+  workflow_integration:
+    gohighlevel_webhook: "API call via workflow action"
+    leadconnector_conversation: "Direct integration via V3 structure"
+    custom_applications: "REST API endpoints"
+
+# Error Handling and Monitoring
+error_handling:
+  rate_limiting:
+    detection: "HTTP 429 status code"
+    response: "exponential backoff with jitter"
+    max_retries: 3
+    fallback: "cached response or manual queue"
+    
+  token_limits:
+    detection: "Response truncation or 400 error"
+    response: "input compression or chunking"
+    monitoring: "track token usage trends"
+    
+  model_availability:
+    detection: "503 service unavailable"
+    response: "fallback to backup model"
+    notification: "alert operations team"
+    
+  content_filtering:
+    detection: "Content policy violation"
+    response: "safe fallback content"
+    logging: "record for review and improvement"
+
+# Performance Optimization
+performance_optimization:
+  caching_strategy:
+    classification_results: "24 hours"
+    content_templates: "1 week"
+    conversation_context: "session duration"
+    
+  batch_processing:
+    lead_classification: "group similar requests"
+    content_generation: "template-based batching"
+    
+  cost_optimization:
+    model_selection: "right-size for task complexity"
+    prompt_efficiency: "minimize unnecessary tokens"
+    response_caching: "avoid duplicate API calls"
+
+# Quality Assurance
+quality_assurance:
+  output_validation:
+    format_compliance: "regex pattern matching"
+    content_appropriateness: "business context validation"
+    language_quality: "grammar and coherence checks"
+    
+  performance_metrics:
+    response_time: "average, p95, p99"
+    accuracy: "classification correctness"
+    user_satisfaction: "conversation quality scores"
+    cost_efficiency: "tokens per successful outcome"
+    
+  continuous_improvement:
+    feedback_collection: "user ratings and corrections"
+    model_fine_tuning: "task-specific optimization"
+    prompt_iteration: "A/B testing of variations"

@@ -1,0 +1,122 @@
+# GoHighLevel Integration Configuration
+
+# API Configuration
+gohighlevel_config:
+  api_version: "v2"
+  base_url: "https://services.leadconnector.io"
+  authentication:
+    type: "OAuth2"
+    scopes: ["workflows", "contacts", "conversations"]
+    
+  webhook_endpoints:
+    lead_classification: "/webhook/classify-lead"
+    content_generation: "/webhook/generate-content"
+    
+  rate_limits:
+    requests_per_minute: 100
+    burst_limit: 20
+    
+  timeout_settings:
+    connection_timeout: 30
+    read_timeout: 60
+
+# Workflow Integration
+workflow_config:
+  name: "Lead Classification Automation"
+  trigger: "Form Submission"
+  
+  input_mapping:
+    contact_data:
+      - "{{contact.first_name}}"
+      - "{{contact.last_name}}"
+      - "{{contact.email}}"
+      - "{{contact.phone}}"
+    
+    form_fields:
+      - "{{form.eigenkapital}}"
+      - "{{form.projekt_typ}}"
+      - "{{form.zeitfenster}}"
+      - "{{form.finanzierungssumme}}"
+      - "{{form.einkommen}}"
+  
+  automation_steps:
+    classify_lead:
+      action: "AI Prompt"
+      prompt_source: "Automationsprompts/lead-classification-automation.md"
+      input: "form_data + contact_data"
+      output_variable: "lead_classification"
+      
+    branch_a_lead:
+      condition: "{{lead_classification}} = 'A-LEAD'"
+      actions:
+        - assign_tag: "hot_lead"
+        - assign_tag: "priority_contact"
+        - send_internal_notification: "Heißer Lead - sofort bearbeiten!"
+        - start_workflow: "A-Lead Immediate Contact"
+        
+    branch_b_lead:
+      condition: "{{lead_classification}} = 'B-LEAD'"
+      actions:
+        - assign_tag: "warm_lead"
+        - start_workflow: "B-Lead Nurturing Sequence"
+        - schedule_followup: "+2 days"
+        
+    branch_c_lead:
+      condition: "{{lead_classification}} = 'C-LEAD'"
+      actions:
+        - assign_tag: "cold_lead"
+        - start_workflow: "C-Lead Educational Content"
+        - schedule_followup: "+1 week"
+
+# Field Mapping
+field_mapping:
+  standard_contacts:
+    firstName: "{{contact.first_name}}"
+    lastName: "{{contact.last_name}}"
+    email: "{{contact.email}}"
+    phone: "{{contact.phone}}"
+    source: "{{contact.lead_source}}"
+    
+  custom_fields:
+    eigenkapital: "{{contact.eigenkapital}}"
+    projekt_typ: "{{contact.projekt_typ}}"
+    zeitfenster: "{{contact.zeitfenster}}"
+    finanzierungssumme: "{{contact.finanzierungssumme}}"
+    einkommen: "{{contact.einkommen}}"
+    bonitaet: "{{contact.bonitaet}}"
+
+# Error Handling
+error_handling:
+  timeout:
+    fallback_classification: "B-LEAD"
+    retry_attempts: 3
+    retry_delay: "30s"
+    
+  invalid_response:
+    fallback_classification: "C-LEAD"
+    log_error: true
+    notification: "Admin-Team"
+    
+  missing_data:
+    minimum_required_fields: ["email", "projekt_typ"]
+    fallback_classification: "C-LEAD"
+    
+  api_failure:
+    fallback_action: "Manual Review Queue"
+    notification: "urgent"
+
+# Testing Configuration
+testing:
+  webhooks:
+    staging: "https://staging.leadconnector.io/webhook/test"
+    production: "https://services.leadconnector.io/webhook/live"
+    
+  test_data_sets:
+    - name: "A-Lead Samples"
+      file: "test-data/a-lead-samples.json"
+    - name: "B-Lead Samples"
+      file: "test-data/b-lead-samples.json"
+    - name: "C-Lead Samples"
+      file: "test-data/c-lead-samples.json"
+    - name: "Edge Cases"
+      file: "test-data/edge-cases.json"
