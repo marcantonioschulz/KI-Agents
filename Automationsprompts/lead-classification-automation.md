@@ -36,10 +36,14 @@ Schwächerer Lead (Conversion Rate: ~15-25%)
 - Anti-Persona: Investment-Fokus, unrealistische Erwartungen, keine Familie, Träumer, Perfektionismus
 
 **WICHTIG:**
-Antworte EXAKT mit einem der folgenden Werte (ohne Erklärung, ohne Anführungszeichen, ohne Formatierung):
-A-LEAD
-B-LEAD
-C-LEAD
+Antworte IMMER exakt im folgenden Format (ohne weitere Erklärungen, ohne Anführungszeichen, ohne zusätzliche Formatierung):
+
+LEAD_CLASS: <A-LEAD|B-LEAD|C-LEAD>
+NOTIZ: <1-2 Sätze, warum diese Einstufung>
+
+Beispiel:
+LEAD_CLASS: B-LEAD
+NOTIZ: Wenig Eigenkapital, aber Doppelverdiener und konkrete Immobiliensuche, daher mittlere Einstufung.
 
 Bei Unsicherheit oder unvollständigen Daten:
 - Konservativ bewerten (eine Stufe niedriger)
