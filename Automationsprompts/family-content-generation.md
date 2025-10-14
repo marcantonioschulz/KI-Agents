@@ -1,3 +1,29 @@
+# =====================
+# COPY THIS SECTION FOR AUTOMATION PROMPT
+# =====================
+Erstelle personalisierte Inhalte für die Zielgruppe "Pragmatische Familien-Optimierer" auf Basis folgender Variablen:
+
+- Vorname: {{contact.first_name}}
+- Nachname: {{contact.last_name}}
+- E-Mail: {{contact.email}}
+- Telefon: {{contact.phone}}
+- Kinderanzahl: {{family.children_count}}
+- Kinderalter: {{family.children_ages}}
+- Aktuelle Wohnsituation: {{family.current_living_situation}}
+- Hauptauslöser: {{family.main_trigger}}
+- Projektzeitraum: {{project.timeline}}
+- Budgetrahmen: {{project.budget_range}}
+- Wunschregion: {{project.location_preference}}
+
+Passe den Content-Typ und die Ansprache an den Auslöser an (z.B. Familienzuwachs, Mietfrust, Platzmangel, Gesundheit). Nutze emotionale Hooks, rationale Benefits und passende Visuals. Die Ansprache ist warm, lösungsorientiert und familiennah.
+
+**WICHTIG:**
+Antworte ausschließlich mit dem generierten Content (z.B. E-Mail, Social Media Post, Betreffzeile, CTA) – keine Erklärungen, keine Formatierung, keine Kommentare.
+
+Bei fehlenden Daten: Content so generisch wie möglich halten, aber immer auf Familienfokus achten.
+# =====================
+# END OF COPY SECTION
+# =====================
 # Family-Focused Content Generation - Persona-basiert
 
 ## Metadata
