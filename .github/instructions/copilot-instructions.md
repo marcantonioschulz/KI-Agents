@@ -22,6 +22,8 @@ This codebase manages AI-driven voice and conversation agents for "Endlich zu Ha
 ### Documentation Architecture
 - **`Docs/ai-prompting-framework.yaml`**: V3 structure mapping and LeadConnector optimization guidelines
 - **`Docs/automation-framework.yaml`**: Comprehensive automation standards, integration patterns, and quality requirements
+- **`Docs/leadconnector_bot_docs.md`**: LeadConnector contact info collection, merge fields, and bot configuration
+- **`Docs/leadconnector_stop_bot_action.md`**: Automated bot deactivation scenarios and trigger configuration
 - **`Docs/realtime-prompting-guide.md`**: OpenAI Realtime API best practices and TTS optimization
 - **`Docs/social-proof-types.yaml`**: Customer psychology framework for German financial services
 - **`Docs/bot-goals-framework.yaml`**: Measurable objective definitions for agent performance

@@ -25,10 +25,18 @@ Every configuration is battle-tested in production and optimized for **OpenAI Re
 **Für Conversation Agents (Chat/Text):**
 - 💬 [**Vivi KI Conversation Agent** - Hauptprompt für Text-Chat](Conversation%20Agent/Vivi%20KI%20Conversation%20AI.md)
 
+**Für Automation & Lead-Classification:**
+- 🤖 [**Lead Classification Automation** - GoHighLevel Integration](Automationsprompts/lead-classification-automation.md)
+- 👪 [**Family Content Generation** - Persona-basierte Inhalte](Automationsprompts/family-content-generation.md)
+
 **Knowledge Base & Frameworks:**
 - 📚 [**Vivi KI Knowledge Base** - Wissenssammlung](Knowledge%20Base/Kunden/Vivi%20KI%20Knowledge.md)
+- 🎯 [**Zielgruppen-Persona** - Pragmatische Familien-Optimierer](Knowledge%20Base/Business%20Rules/Zielgruppen-Persona-Endlich-zu-Hause.md)
 - 🛠️ [**AI Prompting Framework** - Technische Anleitung](Docs/ai-prompting-framework.yaml)
+- ⚙️ [**Automation Framework** - Workflow-Standards](Docs/automation-framework.yaml)
 - 📋 [**Conversation AI Guide** - Setup-Anleitung](Docs/Conversation%20AI%20Guide)
+- 🔗 [**LeadConnector Bot Setup** - Merge Fields & Contact Info](Docs/leadconnector_bot_docs.md)
+- 🛑 [**Stop Bot Action** - Automatische Bot-Deaktivierung](Docs/leadconnector_stop_bot_action.md)
 
 > **💡 Tipp:** Klicke einfach auf die Links oben, um direkt zu den gewünschten Prompt-Texten zu gelangen. Du kannst die Inhalte kopieren und in dein System einfügen.
 
@@ -60,21 +68,47 @@ KI Agents/
 │       ├── conversation-agent.instructions.md
 │       ├── copilot-instructions.md
 │       └── voice-agent.instructions.md
+├── Automationsprompts/
+│   ├── family-content-generation.md
+│   ├── lead-classification-automation.md
+│   ├── testing-guide.md
+│   └── templates/
+│       ├── classification-template.md
+│       └── content-generation-template.md
 ├── Docs/
 │   ├── ai-prompting-framework.yaml
+│   ├── automation-framework.yaml
 │   ├── bot-goals-framework.yaml
 │   ├── Conversation AI Guide
+│   ├── leadconnector_bot_docs.md
+│   ├── leadconnector_stop_bot_action.md
 │   ├── merge-fields.md
 │   ├── post-types-framework.yaml
 │   ├── realtime-prompting-guide.md
 │   └── social-proof-types.yaml
+├── Integration Configs/
+│   ├── GoHighLevel/
+│   │   └── automation-integration-config.yaml
+│   ├── LeadConnector/
+│   │   └── conversation-ai-v3-config.yaml
+│   └── OpenAI-API/
+│       └── api-configuration.yaml
 ├── Voice Agent/
 │   ├── Finanzberater Coach AI.md
 │   ├── Vivi KI Voice AI.md
 │   └── Vivi KI Voice AI (FULL BACKUP).md
 ├── Conversation Agent/
 │   └── Vivi KI Conversation AI.md
+├── Workflow Templates/
+│   ├── appointment-booking-workflow.yaml
+│   ├── lead-nurturing-sequences.yaml
+│   └── error-handling-procedures.yaml
 └── Knowledge Base/
+    ├── Business Rules/
+    │   └── Zielgruppen-Persona-Endlich-zu-Hause.md
+    ├── Automation Contexts/
+    │   ├── customer-journey-stages.md
+    │   └── lead-scoring-criteria.md
     ├── Kunden/
     │   └── Vivi KI Knowledge.md
     └── Partner/
@@ -89,8 +123,15 @@ KI Agents/
 ### Conversation Agents (Text-Based)
 - **Vivi KI Conversation** – Text-based version using Conversation AI V3 structure with three fields: Personality (agent character and tone), Goal (primary objectives and flow), and Additional Information (safety rules and constraints).
 
+## Automation & Workflows
+- **Lead Classification** – [`Automationsprompts/lead-classification-automation.md`](Automationsprompts/lead-classification-automation.md) provides persona-optimized lead scoring for GoHighLevel IF-ELSE workflows.
+- **Content Generation** – [`Automationsprompts/family-content-generation.md`](Automationsprompts/family-content-generation.md) creates personalized marketing content based on family triggers and customer personas.
+- **Testing Framework** – [`Automationsprompts/testing-guide.md`](Automationsprompts/testing-guide.md) ensures systematic validation and quality assurance for all automation prompts.
+
 ## Documentation & Frameworks
 - **Prompting Fundamentals** – [`Docs/ai-prompting-framework.yaml`](Docs/ai-prompting-framework.yaml) and [`Docs/bot-goals-framework.yaml`](Docs/bot-goals-framework.yaml) define global prompting principles and measurable agent goals, updated for Conversation AI V3.
+- **Automation Standards** – [`Docs/automation-framework.yaml`](Docs/automation-framework.yaml) establishes quality standards, integration patterns, and testing requirements for workflow automation.
+- **LeadConnector Integration** – [`Docs/leadconnector_bot_docs.md`](Docs/leadconnector_bot_docs.md) covers contact info collection, merge fields, and V3 bot configuration. [`Docs/leadconnector_stop_bot_action.md`](Docs/leadconnector_stop_bot_action.md) explains automated bot deactivation scenarios.
 - **Realtime Voice Best Practices** – [`Docs/realtime-prompting-guide.md`](Docs/realtime-prompting-guide.md) condenses OpenAI's realtime API guidance into actionable checklists.
 - **Marketing & Social Proof** – [`Docs/post-types-framework.yaml`](Docs/post-types-framework.yaml) and [`Docs/social-proof-types.yaml`](Docs/social-proof-types.yaml) capture the core content archetypes used across campaigns.
 - **Merge Fields Reference** – [`Docs/merge-fields.md`](Docs/merge-fields.md) lists GoHighLevel merge fields for consistent CRM sync.
