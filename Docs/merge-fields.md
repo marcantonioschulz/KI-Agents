@@ -24,9 +24,11 @@ Merge Fields ermöglichen die dynamische Personalisierung von E-Mails, SMS, Webs
 - `{{contact.phone_raw}}` – Telefonnummer (ohne Formatierung)
 - `{{contact.company_name}}` – Firmenname
 - `{{contact.full_address}}` – Vollständige Adresse
-- `{{contact.address1}}` – Adresse 1
+- `{{contact.address1}}` – Adresse Zeile 1
+- `{{contact.address_line2}}` – Adresse Zeile 2
 - `{{contact.city}}` – Stadt
 - `{{contact.state}}` – Bundesland
+- `{{contact.country}}` – Land
 - `{{contact.postal_code}}` – Postleitzahl
 - `{{contact.timezone}}` – Zeitzone
 - `{{contact.date_of_birth}}` – Geburtsdatum
@@ -51,20 +53,47 @@ Merge Fields ermöglichen die dynamische Personalisierung von E-Mails, SMS, Webs
 
 ### APPOINTMENT
 
+**Basis-Informationen:**
 - `{{appointment.title}}` – Termin-Titel
-- `{{appointment.start_time}}` – Startzeit
-- `{{appointment.only_start_date}}` – Nur Datum
-- `{{appointment.only_start_time}}` – Nur Uhrzeit
-- `{{appointment.end_time}}` – Endzeit
-- `{{appointment.cancellation_link}}` – Link zur Terminabsage
-- `{{appointment.reschedule_link}}` – Link zur Terminverschiebung
-- `{{appointment.meeting_location}}` – Treffpunkt
+- `{{appointment.status}}` – Status
 - `{{appointment.notes}}` – Notizen
+- `{{appointment.meeting_location}}` – Treffpunkt
+
+**Zeitangaben:**
+- `{{appointment.start_time}}` – Startzeit (vollständig)
+- `{{appointment.end_time}}` – Endzeit (vollständig)
+- `{{appointment.only_start_date}}` – Nur Startdatum
+- `{{appointment.only_start_time}}` – Nur Startzeit
+- `{{appointment.only_end_date}}` – Nur Enddatum
+- `{{appointment.only_end_time}}` – Nur Endzeit
+
+**Datum-Details:**
+- `{{appointment.day}}` – Tag
+- `{{appointment.day_of_week}}` – Wochentag
+- `{{appointment.month}}` – Monat
+- `{{appointment.month_name}}` – Monatsname
+- `{{appointment.year}}` – Jahr
+- `{{appointment.timezone}}` – Zeitzone
+
+**Kalender-Links:**
 - `{{appointment.add_to_google_calendar}}` – Google Kalender Link
 - `{{appointment.add_to_ical_outlook}}` – iCal/Outlook Link
-- `{{appointment.day_of_week}}`, `{{appointment.month}}`, `{{appointment.timezone}}`, ...
-- Recurring: `{{appointment.recurring.repeats}}`, ...
-- Assigned user: `{{appointment.user.name}}`, `{{appointment.user.email}}`, ...
+
+**Termin-Management:**
+- `{{appointment.cancellation_link}}` – Link zur Terminabsage
+- `{{appointment.reschedule_link}}` – Link zur Terminverschiebung
+
+**Wiederholende Termine:**
+- `{{appointment.recurring.repeats}}` – Wiederholungstyp
+- `{{appointment.recurring.frequency}}` – Frequenz
+- `{{appointment.recurring.interval}}` – Intervall
+
+**Zugewiesener Benutzer:**
+- `{{appointment.user.name}}` – Name
+- `{{appointment.user.first_name}}` – Vorname
+- `{{appointment.user.last_name}}` – Nachname
+- `{{appointment.user.email}}` – E-Mail
+- `{{appointment.user.phone}}` – Telefon
 
 ### CALENDAR
 
@@ -83,38 +112,151 @@ Merge Fields ermöglichen die dynamische Personalisierung von E-Mails, SMS, Webs
 
 ### ACCOUNT/LOCATION
 
+**Basis-Informationen:**
 - `{{location.name}}` – Standortname
-- `{{location.full_address}}` – Vollständige Adresse
-- `{{location.address}}` – Adresse
-- `{{location.city}}` – Stadt
-- `{{location.state}}` – Bundesland
-- `{{location.country}}` – Land
-- `{{location.postal_code}}` – PLZ
+- `{{location.id}}` – Standort-ID
 - `{{location.email}}` – E-Mail
 - `{{location.phone}}` – Telefonnummer
 - `{{location.phone_raw}}` – Telefonnummer (roh)
 - `{{location.website}}` – Webseite
 - `{{location.logo_url}}` – Logo URL
-- Owner: `{{location_owner.first_name}}`, ...
-- `{{location.id}}` – Standort-ID
+
+**Adresse:**
+- `{{location.full_address}}` – Vollständige Adresse
+- `{{location.address}}` – Adresse Zeile 1
+- `{{location.address_line2}}` – Adresse Zeile 2
+- `{{location.city}}` – Stadt
+- `{{location.state}}` – Bundesland
+- `{{location.country}}` – Land
+- `{{location.postal_code}}` – PLZ
+
+**Owner/Inhaber:**
+- `{{location_owner.name}}` – Vollständiger Name
+- `{{location_owner.first_name}}` – Vorname
+- `{{location_owner.last_name}}` – Nachname
+- `{{location_owner.email}}` – E-Mail
+- `{{location_owner.phone}}` – Telefon
 
 ### RIGHT NOW
 
-- `{{right_now.second}}`, `{{right_now.minute}}`, `{{right_now.hour}}`, ...
-- `{{right_now.day_of_week}}`, `{{right_now.month_name}}`, `{{right_now.year}}`, ...
+**Zeit:**
+- `{{right_now.second}}` – Sekunde (0-59)
+- `{{right_now.minute}}` – Minute (0-59)
+- `{{right_now.hour}}` – Stunde (0-23, 24h-Format)
+- `{{right_now.hour_ampm}}` – Stunde (1-12, AM/PM-Format)
+- `{{right_now.ampm}}` – AM oder PM
+
+**Datum:**
+- `{{right_now.day}}` – Tag (1-31)
+- `{{right_now.day_of_month}}` – Tag im Monat (1-31)
+- `{{right_now.day_of_week}}` – Wochentag (z.B. "Montag", "Dienstag")
+- `{{right_now.day_of_week_abbr}}` – Wochentag abgekürzt (z.B. "Mo", "Di")
+- `{{right_now.month}}` – Monat (1-12)
+- `{{right_now.month_name}}` – Monatsname (z.B. "Januar", "Februar")
+- `{{right_now.month_abbr}}` – Monat abgekürzt (z.B. "Jan", "Feb")
+- `{{right_now.year}}` – Jahr (z.B. "2025")
+- `{{right_now.year_short}}` – Jahr zweistellig (z.B. "25")
+
+**Weitere:**
+- `{{right_now.timezone}}` – Zeitzone (z.B. "Europe/Berlin")
+- `{{right_now.unix_timestamp}}` – Unix-Timestamp
 
 ### ATTRIBUTION
 
-- Attribution: `{{contact.attributionSource.sessionSource}}`, ...
-- Latest Attribution: `{{contact.lastAttributionSource.sessionSource}}`, ...
+**Erste Attribution (First Touch):**
+- `{{contact.attributionSource.sessionSource}}` – Session-Quelle
+- `{{contact.attributionSource.url}}` – URL
+- `{{contact.attributionSource.utmSource}}` – UTM Source
+- `{{contact.attributionSource.utmMedium}}` – UTM Medium
+- `{{contact.attributionSource.utmCampaign}}` – UTM Campaign
+- `{{contact.attributionSource.utmTerm}}` – UTM Term
+- `{{contact.attributionSource.utmContent}}` – UTM Content
+- `{{contact.attributionSource.referrer}}` – Referrer
+- `{{contact.attributionSource.fbclid}}` – Facebook Click ID
+- `{{contact.attributionSource.gclid}}` – Google Click ID
+- `{{contact.attributionSource.msclkid}}` – Microsoft Click ID
+
+**Letzte Attribution (Last Touch):**
+- `{{contact.lastAttributionSource.sessionSource}}` – Session-Quelle
+- `{{contact.lastAttributionSource.url}}` – URL
+- `{{contact.lastAttributionSource.utmSource}}` – UTM Source
+- `{{contact.lastAttributionSource.utmMedium}}` – UTM Medium
+- `{{contact.lastAttributionSource.utmCampaign}}` – UTM Campaign
+- `{{contact.lastAttributionSource.utmTerm}}` – UTM Term
+- `{{contact.lastAttributionSource.utmContent}}` – UTM Content
+- `{{contact.lastAttributionSource.referrer}}` – Referrer
+- `{{contact.lastAttributionSource.fbclid}}` – Facebook Click ID
+- `{{contact.lastAttributionSource.gclid}}` – Google Click ID
+- `{{contact.lastAttributionSource.msclkid}}` – Microsoft Click ID
+
+### COURSE
+
+**Kurs-Informationen:**
+- `{{course.name}}` – Kursname
+- `{{course.description}}` – Beschreibung
+- `{{course.url}}` – Kurs-URL
+- `{{course.image}}` – Kursbild-URL
+
+**Produkt-Details:**
+- `{{course.product.name}}` – Produktname
+- `{{course.product.description}}` – Produktbeschreibung
+- `{{course.product.image}}` – Produktbild
+
+**Fortschritt:**
+- `{{course.progress.percentage}}` – Fortschritt in %
+- `{{course.progress.completed_lessons}}` – Abgeschlossene Lektionen
+- `{{course.progress.total_lessons}}` – Gesamtzahl Lektionen
 
 ### INVOICE
 
-- `{{invoice.name}}`, `{{invoice.number}}`, `{{invoice.issue_date}}`, ...
-- Company: `{{invoice.company.name}}`, ...
-- Customer: `{{invoice.customer.name}}`, ...
-- Sender: `{{invoice.sender.name}}`, ...
-- Card: `{{invoice.card.brand}}`, ...
+**Rechnungs-Informationen:**
+- `{{invoice.name}}` – Rechnungsname
+- `{{invoice.number}}` – Rechnungsnummer
+- `{{invoice.title}}` – Titel
+- `{{invoice.issue_date}}` – Ausstellungsdatum
+- `{{invoice.due_date}}` – Fälligkeitsdatum
+- `{{invoice.status}}` – Status
+- `{{invoice.currency}}` – Währung
+
+**Beträge:**
+- `{{invoice.total_amount}}` – Gesamtbetrag
+- `{{invoice.sub_total}}` – Zwischensumme
+- `{{invoice.discount}}` – Rabatt
+- `{{invoice.tax}}` – Steuer
+- `{{invoice.amount_paid}}` – Bezahlter Betrag
+- `{{invoice.amount_due}}` – Offener Betrag
+
+**Unternehmen:**
+- `{{invoice.company.name}}` – Firmenname
+- `{{invoice.company.address}}` – Adresse
+- `{{invoice.company.city}}` – Stadt
+- `{{invoice.company.state}}` – Bundesland
+- `{{invoice.company.country}}` – Land
+- `{{invoice.company.postal_code}}` – PLZ
+- `{{invoice.company.phone}}` – Telefon
+- `{{invoice.company.email}}` – E-Mail
+- `{{invoice.company.website}}` – Webseite
+
+**Kunde:**
+- `{{invoice.customer.name}}` – Name
+- `{{invoice.customer.email}}` – E-Mail
+- `{{invoice.customer.phone}}` – Telefon
+- `{{invoice.customer.address}}` – Adresse
+
+**Absender:**
+- `{{invoice.sender.name}}` – Name
+- `{{invoice.sender.email}}` – E-Mail
+- `{{invoice.sender.phone}}` – Telefon
+
+**Zahlungskarte:**
+- `{{invoice.card.brand}}` – Kartentyp (Visa, Mastercard, etc.)
+- `{{invoice.card.last4}}` – Letzte 4 Ziffern
+- `{{invoice.card.exp_month}}` – Ablaufmonat
+- `{{invoice.card.exp_year}}` – Ablaufjahr
+
+**Links:**
+- `{{invoice.live_payment_link}}` – Zahlungslink
+- `{{invoice.alt_payment_link}}` – Alternativer Zahlungslink
 
 ## Custom Fields (Projektbezogen)
 
